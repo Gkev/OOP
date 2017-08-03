@@ -5,13 +5,18 @@ class Car(object):
 		self.speed = speed
 		self.fuel = fuel
 		self.miles = miles
-		self.tax = 0
+		if price > 10000:
+			self.tax = .15
+		else:
+			self.tax = .12
+			self.display_all()	
 
 	def display_all(self):
 			print 'Price: ' + str(self.price)
 			print 'Speed: ' + str(self.speed) + ' mph'
-			print 'Fuel: ' + str(self.fuel)
+			print 'Fuel: '  + str(self.fuel)
 			print 'Miles: ' + str(self.miles) + ' miles'
+			print 'Tax: '   + str(self.tax)
 
 			
 
